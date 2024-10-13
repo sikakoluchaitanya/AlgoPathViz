@@ -1,4 +1,8 @@
 export type Algorithm = "Dijkstra" | "A-star" | "BFS" | "DFS";
+export interface AlgorithmSelectType {
+    name: string;
+    value: Algorithm;
+}
 
 export type MazeType = "NONE" | "Binary-Tree" | "Recursive-Division";
 
