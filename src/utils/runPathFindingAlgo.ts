@@ -1,7 +1,7 @@
 // import { aStar } from "../lib/Algorithm/pathfinding/aStar";
 import { bfs } from "../lib/Algorithm/pathfinding/bfs";
-// import { dfs } from "../lib/Algorithm/pathfinding/dfs";
-// import { dijkstra } from "../lib/Algorithm/pathfinding/dijkstra";
+import { dfs } from "../lib/Algorithm/pathfinding/dfs";
+import { dijkstra } from "../lib/Algorithm/pathfinding/dijkstra";
 import { Algorithm, GridType, TileType } from "./types";
 
 export const runPathfindingAlgorithm = ({
@@ -18,10 +18,10 @@ export const runPathfindingAlgorithm = ({
   switch (algorithm) {
     case "BFS":
       return bfs(grid, startTile, endTile);
-    // case "DFS":
-    //   return dfs(grid, startTile, endTile);
-    // case "Dijkstra":
-    //   return dijkstra(grid, startTile, endTile);
+    case "DFS":
+      return dfs(grid, startTile, endTile);
+    case "Dijkstra":
+      return dijkstra(grid, startTile, endTile);
     // case "A-star":
     //   return aStar(grid, startTile, endTile);
     default:
