@@ -1,23 +1,23 @@
-import { PathfindProvider } from "./context/PathfindContext";
+import { PathfindingProvider } from "./context/PathfindContext";
 import { TileProvider } from "./context/TileContext";
 import { SpeedProvider } from "./context/SpeedContext";
 import { Grid } from "./components/Grid";
-import { Navbar } from "./components/Navbar";
+import { Nav } from "./components/Navbar";
 import { useRef } from "react";
 
 function App() {
-  const isVisulizerRunningRef = useRef(false); 
+  const isVisualizationRunningRef = useRef(false); 
   return (
-    <PathfindProvider>
+    <PathfindingProvider>
       <TileProvider>
         <SpeedProvider>
           <div className="h-screen w-screen flex flex-col items-center justify-center bg-slate-900">
-            <Navbar />
-            <Grid isVisulizerRunningRef={isVisulizerRunningRef} />
+            <Nav isVisualizationRunningRef={isVisualizationRunningRef} />
+            <Grid isVisualizationRunningRef={isVisualizationRunningRef} />
           </div>
         </SpeedProvider>
       </TileProvider>
-    </PathfindProvider>
+    </PathfindingProvider>
   )
 }
 
